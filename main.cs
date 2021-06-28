@@ -3,16 +3,20 @@ using System;
 class MainClass {
   public static void Main (string[] args) {
     Console.WriteLine ("Enter a number to see if it's prime");
-    double input = Convert.ToDouble(Console.ReadLine());
-    for (double i = input - 1; i > 1; i--)
+    int input = Convert.ToInt32(Console.ReadLine());
+   for (int i = input - 1; i > 0; i--)
     {
-    double denominator = i;
-    double result = input % denominator;
-    if (result == 0)
+    int denominator = i;
+    int result = input % denominator;
+    if (i == 1)
      {
+      Console.WriteLine("This is a prime number");
       break;
+     } else if (result == 0)
+     {
+       Console.WriteLine("This isn't a prime number");
+       break;
      }
-     Console.WriteLine("This isn't a prime number");
-    } Console.WriteLine ("This is a prime number");
+    } 
   } 
 }
